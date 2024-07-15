@@ -1,0 +1,53 @@
+.form-parent {
+  height: 650px;
+  width: 100%;
+  max-width: 700px;
+  padding: 2em;
+}
+
+.form {
+  height: 560px;
+  width: 100%;
+  max-width: 700px;
+  overflow-y: scroll;
+}
+
+.form,
+ul {
+  padding: 1em 2em 1em 0em;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.form {
+  overflow-y: auto;
+}
+
+ul {
+  padding: 0;
+  width: 100%;
+}
+
+.form-group,
+li {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 1em 1em;
+  align-items: center;
+}
+
+.form-ingredients-container,
+.form-step-container {
+  align-items: flex-end;
+}
+.form-step-container {
+  flex: auto;
+}
+
+@media screen and (max-width: 700px) {
+  .form-parent {
+    overflow-y: visible;
+  }
+}

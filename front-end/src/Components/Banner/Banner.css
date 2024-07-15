@@ -1,0 +1,44 @@
+.headerImg img {
+  width: 600px;
+  height: auto;
+}
+
+.headerImg {
+  margin-top: 3em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: auto;
+}
+
+h3 {
+  text-align: center;
+}
+
+hr {
+  width: 100%;
+  margin-top: 1.5em;
+  background-color: var(--primary-color);
+}
+
+.headerImg ul {
+  display: inline;
+  padding: 1em;
+}
+
+.headerImg li {
+  display: inline;
+  padding: 1em;
+}
+
+.headerImg li:hover {
+  background-color: var(--primary-color);
+  color: var(--background-color);
+}
+
+.headerImg li:hover a {
+    text-decoration: none;
+    color: var(--background-color);
+
+  }

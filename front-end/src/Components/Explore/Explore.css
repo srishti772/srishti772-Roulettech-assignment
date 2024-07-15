@@ -1,0 +1,32 @@
+.explore-parent {
+    height: 650px;
+    width: 100%;
+    max-width: 700px;
+   
+    overflow-y: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5em 0.5em;
+  }
+
+  .explore-container{
+    padding: 2em;
+
+  }
+
+
+  @media screen and (max-width: 700px) {
+    .explore-parent  .card {
+   
+        flex: 1 1 40%;
+     
+      }
+
+      .explore-parent {
+        height: 100%;
+        
+        overflow-y: show;
+      }
+    
+  }
+  

@@ -1,0 +1,28 @@
+.btn {
+  color: #0e0c0c;
+  border: 0;
+  border-radius: 8px;
+  width: 100px;
+  height: 40px;
+  cursor: pointer;
+  font-weight: bolder;
+  letter-spacing: 0.2em;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+}
+
+.btn-secondary {
+  background: transparent;
+  border-radius: 100%;
+  width: 1em;
+  height: 3em;
+  color: var(--primary-color);
+}
+
+.btn-disabled {
+  background-color: var(--disabled) !important;
+  cursor: not-allowed;
+  color: rgb(98, 98, 98);
+}

@@ -1,0 +1,17 @@
+.App {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around; /* Ensures items are evenly distributed */
+  align-items: flex-start; /* Align items at the start of the flex container */
+  padding: 20px;
+  flex-wrap: wrap;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.items{
+  flex-basis: auto;
+}
