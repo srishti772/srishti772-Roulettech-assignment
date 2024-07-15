@@ -12,6 +12,12 @@
   justify-content: space-between;
 }
 
-.items{
-  flex-basis: auto;
+
+
+.banner-container {
+  flex: 1 0 100%; /* Take full width */
+}
+
+.outlet-container {
+  flex: 0 0 100%; /* Take full width */
 }

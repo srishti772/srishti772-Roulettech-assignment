@@ -10,9 +10,14 @@ import {
   CaretDownFill,
   CaretUpFill,
 } from "react-bootstrap-icons";
+import Toast from "../Toast/Toast";
 
 function Recipe() {
   const [submitDisabled, setSubmitDisabled] = useState(true);
+  const [status, setStatus] = useState({
+    message:"",
+    type:""
+  });
   const [errors, setErrors] = useState({
     title: "",
     description: "",
@@ -173,11 +178,23 @@ function Recipe() {
     })
       .then((response) => {
         console.log("res received", response);
+        if(response.status===201){
+          setStatus({
+            message:"Saved Successfully",
+            type:"success"
+          });
+        }else{
+          setStatus({
+            message:"Error",
+            type:"fail"
+          });
+        }
 
         return response.json();
       })
       .then((data) => {
         console.log("data received", data);
+       
       })
       .catch((err) => {
         console.log(err);
@@ -278,11 +295,15 @@ function Recipe() {
                     list={`measurement-list-${index}`}
                     onChange={(e) => handleIngredientChange(index, e)}
                     required={true}
-                    pattern="Tbsp|Cups|Cup"
+                    pattern="Tbsp|Cups|Cup|Grams|Kilograms|Ounces|"
                   />
                   <datalist id={`measurement-list-${index}`}>
                     <option value="Tbsp">Tablespoon (tbsp)</option>
                     <option value="Cups">Cups</option>
+                    <option value="Cup">Cup</option>
+                    <option value="Grams">Grams</option>
+                    <option value="Kilograms">Kilograms</option>
+                    <option value="Ounces">Ounces</option>
                   </datalist>
 
                   <Input
@@ -292,7 +313,7 @@ function Recipe() {
                     value={ingredient.name}
                     onChange={(e) => handleIngredientChange(index, e)}
                     required={true}
-                    pattern="[A-Za-z]*"
+                    pattern="[A-Za-z ]*"
                   />
                   {index > 0 && (
                     <Button
@@ -376,6 +397,8 @@ function Recipe() {
         >
           Submit
         </Button>
+
+        <Toast message={status.message} type={status.type}/>
       </section>
     </>
   );

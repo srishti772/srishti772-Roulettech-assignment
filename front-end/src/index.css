@@ -16,6 +16,13 @@
   padding: 0;
 }
 
+.form-parent {
+  height: 650px;
+  width: 100%;
+  max-width: 700px;
+  padding: 2em;
+}
+
 body {
   font-family: "Poppins", sans-serif;
   background-color: var(--background-color);

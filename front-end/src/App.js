@@ -15,13 +15,11 @@ function App() {
     <div className="App">
       <Router>
         <div className="container">
-          <div className="items">
-            {" "}
+          <div className="banner-container">
             <Banner />
           </div>
 
-          <div className="items">
-            {" "}
+          <div className="outlet-container">
             <Outlet />
           </div>
         </div>

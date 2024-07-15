@@ -1,10 +1,3 @@
-.form-parent {
-  height: 650px;
-  width: 100%;
-  max-width: 700px;
-  padding: 2em;
-}
-
 .form {
   height: 560px;
   width: 100%;
@@ -22,6 +15,10 @@ ul {
 
 .form {
   overflow-y: auto;
+}
+
+.form::-webkit-scrollbar {
+  width: 0px;
 }
 
 ul {
